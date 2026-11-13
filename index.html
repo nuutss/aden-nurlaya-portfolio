@@ -43,32 +43,72 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
 
-    .tab-active {
-      background-color: var(--ink) !important;
-      color: #FFFFFF !important;
-      border-color: var(--ink) !important;
+    .quote-callout {
+      border-left: 3px solid var(--accent-crimson);
+      background-color: #F5F5F0;
     }
 
-    .quote-callout {
-      border-left: 2px solid var(--accent-crimson);
-      background-color: #F5F5F0;
+    /* PRINT SPECIFIC STYLES FOR CLEAN PDF EXPORT */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      header, footer, nav {
+        position: static !important;
+      }
+      #pane-projects, #pane-honors, #pane-competencies {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        font-size: 10.5pt !important;
+        line-height: 1.5 !important;
+      }
+      .editorial-card, .quote-callout {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        box-shadow: none !important;
+        border: 1px solid #D6D3D1 !important;
+        margin-bottom: 1.25rem !important;
+        padding: 1.25rem !important;
+      }
+      img {
+        max-width: 100% !important;
+        page-break-inside: avoid !important;
+      }
+      @page {
+        size: A4;
+        margin: 12mm 15mm;
+      }
     }
   </style>
 </head>
 <body class="min-h-screen text-stone-900 antialiased selection:bg-amber-100 selection:text-stone-900">
 
   <!-- TOP EDITORIAL METADATA BAR -->
-  <header class="border-b border-stone-200 bg-white/80 sticky top-0 z-50 backdrop-blur-sm">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+  <header class="border-b border-stone-200 bg-white/90 sticky top-0 z-50 backdrop-blur-sm no-print">
+    <div class="max-w-5xl mx-auto px-6 py-3.5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
       <div class="flex items-center gap-3">
         <span class="font-mono-tag text-xs font-bold tracking-wider uppercase text-stone-900">ADEN NURLAYA</span>
         <span class="text-stone-300">/</span>
         <span class="font-mono-tag text-xs text-stone-500 uppercase tracking-widest">DOSSIER 2026</span>
       </div>
-      <div class="flex flex-wrap items-center gap-2 text-xs font-mono-tag text-stone-600">
-        <span class="px-2 py-0.5 rounded bg-stone-100 border border-stone-200">{ MATHEMATICS }</span>
-        <span class="px-2 py-0.5 rounded bg-stone-100 border border-stone-200">{ SOFTWARE }</span>
-        <span class="px-2 py-0.5 rounded bg-stone-100 border border-stone-200">{ ATHLETICS }</span>
+      <div class="flex flex-wrap items-center gap-2.5 text-xs font-mono-tag">
+        <div class="hidden md:flex items-center gap-1.5 text-stone-500 mr-2">
+          <span class="px-2 py-0.5 rounded bg-stone-100 border border-stone-200">{ MATHEMATICS }</span>
+          <span class="px-2 py-0.5 rounded bg-stone-100 border border-stone-200">{ SOFTWARE }</span>
+        </div>
+        <a href="Aden_Nurlaya_Portfolio.pdf" download="Aden_Nurlaya_Portfolio.pdf" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-stone-900 text-white hover:bg-stone-800 transition font-medium shadow-xs">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Download PDF
+        </a>
+        <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white border border-stone-300 text-stone-700 hover:bg-stone-50 transition font-medium">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          Print
+        </button>
       </div>
     </div>
   </header>
@@ -124,19 +164,22 @@
           </div>
         </div>
 
-        <!-- Direct Contact Badges -->
-        <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono-tag">
-          <a href="https://www.linkedin.com/in/aden-nurlaya-4a9611344/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#0A66C2] text-white hover:bg-[#004182] transition shadow-sm font-semibold">
-            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            LinkedIn Profile
+        <!-- Direct Contact & Action Badges -->
+        <div class="flex flex-wrap items-center gap-2.5 pt-2 text-xs font-mono-tag no-print">
+          <a href="Aden_Nurlaya_Portfolio.pdf" download="Aden_Nurlaya_Portfolio.pdf" class="inline-flex items-center gap-1.5 px-3 py-2 rounded bg-stone-900 text-white hover:bg-stone-800 transition font-semibold shadow-xs">
+            <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Download PDF
           </a>
-          <a href="mailto:Adennurlaya21@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-stone-900 text-white hover:bg-stone-800 transition">
+          <a href="https://www.linkedin.com/in/aden-nurlaya-4a9611344/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2 rounded bg-[#0A66C2] text-white hover:bg-[#004182] transition shadow-xs font-semibold">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:Adennurlaya21@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-2 rounded bg-white border border-stone-300 text-stone-700 hover:border-stone-400 transition">
             <span>✉</span> Adennurlaya21@gmail.com
           </a>
-          <a href="https://wa.me/6285925123846" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-white border border-stone-300 text-stone-700 hover:border-stone-400 transition">
+          <a href="https://wa.me/6285925123846" class="inline-flex items-center gap-1.5 px-3 py-2 rounded bg-white border border-stone-300 text-stone-700 hover:border-stone-400 transition">
             <span>☎</span> +62 859-2512-3846
           </a>
-          <span class="text-stone-400 py-1.5">📍 Sumedang, Indonesia</span>
         </div>
       </div>
 
@@ -154,18 +197,55 @@
       </div>
     </section>
 
-    <!-- NAVIGATION TABS (CANVA EDITORIAL STYLE) -->
-    <nav class="flex border-b border-stone-300 space-x-1 sm:space-x-2 overflow-x-auto text-xs font-mono-tag">
-      <button onclick="switchTab('projects')" id="btn-projects" class="tab-active px-4 py-2.5 rounded-t font-semibold transition border border-b-0 border-transparent">
-        01 / SELECTED WORK SAMPLES (4)
-      </button>
-      <button onclick="switchTab('honors')" id="btn-honors" class="px-4 py-2.5 rounded-t text-stone-600 hover:text-stone-900 font-semibold transition border border-b-0 border-transparent">
-        02 / HONORS &amp; CERTIFICATIONS
-      </button>
-      <button onclick="switchTab('competencies')" id="btn-competencies" class="px-4 py-2.5 rounded-t text-stone-600 hover:text-stone-900 font-semibold transition border border-b-0 border-transparent">
-        03 / SKILLS &amp; 3-YEAR ACTION PLAN
-      </button>
-    </nav>
+    <!-- INTERACTIVE SECTION SWITCHER (UNMISTAKABLY CLICKABLE & REFINED) -->
+    <div id="dossier-nav" class="no-print space-y-3 pt-2">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-stone-200 pb-2">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+          <span class="font-mono-tag text-xs font-bold uppercase tracking-wider text-stone-800">
+            CHOOSE SECTION TO EXPLORE:
+          </span>
+        </div>
+        <div class="flex items-center gap-2 font-mono-tag text-xs text-stone-500">
+          <span class="text-stone-400">Layout Mode:</span>
+          <button onclick="toggleViewMode('tabs')" id="view-tabs-btn" class="px-2.5 py-1 rounded bg-stone-900 text-white font-semibold transition">
+            Interactive Tabs
+          </button>
+          <button onclick="toggleViewMode('all')" id="view-all-btn" class="px-2.5 py-1 rounded bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-300 transition">
+            Expand All Sections
+          </button>
+        </div>
+      </div>
+
+      <!-- High-Affordance Segmented Tabs -->
+      <nav class="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-stone-100/90 p-1.5 rounded-xl border border-stone-300 shadow-xs">
+        
+        <button onclick="switchTab('projects')" id="btn-projects" class="tab-btn py-3 px-4 rounded-lg font-mono-tag text-xs font-bold transition flex items-center justify-between bg-stone-900 text-white border border-stone-900 shadow-sm cursor-pointer">
+          <span class="flex items-center gap-2">
+            <span class="tab-dot w-2 h-2 rounded-full bg-amber-400"></span>
+            <span>01 / SELECTED WORKS</span>
+          </span>
+          <span class="text-[10px] opacity-75 font-mono px-1.5 py-0.5 rounded bg-white/20">4 Projects</span>
+        </button>
+
+        <button onclick="switchTab('honors')" id="btn-honors" class="tab-btn py-3 px-4 rounded-lg font-mono-tag text-xs font-semibold text-stone-700 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 transition flex items-center justify-between shadow-xs cursor-pointer">
+          <span class="flex items-center gap-2">
+            <span class="tab-dot w-2 h-2 rounded-full bg-stone-300"></span>
+            <span>02 / HONORS &amp; AWARDS</span>
+          </span>
+          <span class="text-[10px] text-stone-400 font-mono px-1.5 py-0.5 rounded bg-stone-100 border border-stone-200">Certificates</span>
+        </button>
+
+        <button onclick="switchTab('competencies')" id="btn-competencies" class="tab-btn py-3 px-4 rounded-lg font-mono-tag text-xs font-semibold text-stone-700 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 transition flex items-center justify-between shadow-xs cursor-pointer">
+          <span class="flex items-center gap-2">
+            <span class="tab-dot w-2 h-2 rounded-full bg-stone-300"></span>
+            <span>03 / SKILLS &amp; ROADMAP</span>
+          </span>
+          <span class="text-[10px] text-stone-400 font-mono px-1.5 py-0.5 rounded bg-stone-100 border border-stone-200">2026–2029</span>
+        </button>
+
+      </nav>
+    </div>
 
     <!-- TAB CONTENT 01: WORK SAMPLES -->
     <section id="pane-projects" class="space-y-8">
@@ -365,6 +445,18 @@
         </article>
 
       </div>
+
+      <!-- Section 01 Footer Flow Navigation -->
+      <div class="no-print pt-6 border-t border-stone-200 flex flex-col sm:flex-row justify-between items-center gap-4 bg-stone-50 p-4 rounded-lg border border-stone-200">
+        <div class="text-xs font-mono-tag text-stone-600">
+          <span class="font-bold text-stone-900">Finished reviewing Selected Works?</span> Continue to official certifications.
+        </div>
+        <button onclick="switchTab('honors', true)" class="inline-flex items-center gap-2 px-4 py-2 bg-stone-900 text-white rounded-md text-xs font-mono-tag font-bold hover:bg-stone-800 transition shadow-xs cursor-pointer">
+          <span>Proceed to 02 / Honors &amp; Certifications</span>
+          <span>→</span>
+        </button>
+      </div>
+
     </section>
 
     <!-- TAB CONTENT 02: HONORS & CERTIFICATIONS -->
@@ -415,6 +507,18 @@
         </div>
 
       </div>
+
+      <!-- Section 02 Footer Flow Navigation -->
+      <div class="no-print pt-6 border-t border-stone-200 flex flex-col sm:flex-row justify-between items-center gap-4 bg-stone-50 p-4 rounded-lg border border-stone-200">
+        <button onclick="switchTab('projects', true)" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-stone-300 text-stone-700 rounded-md text-xs font-mono-tag font-semibold hover:bg-stone-50 transition cursor-pointer">
+          <span>← Back to 01 / Selected Works</span>
+        </button>
+        <button onclick="switchTab('competencies', true)" class="inline-flex items-center gap-2 px-4 py-2 bg-stone-900 text-white rounded-md text-xs font-mono-tag font-bold hover:bg-stone-800 transition shadow-xs cursor-pointer">
+          <span>Proceed to 03 / Skills &amp; Action Plan</span>
+          <span>→</span>
+        </button>
+      </div>
+
     </section>
 
     <!-- TAB CONTENT 03: COMPETENCIES & 3-YEAR ACTION PLAN -->
@@ -522,6 +626,17 @@
           </div>
         </div>
       </div>
+
+      <!-- Section 03 Footer Flow Navigation -->
+      <div class="no-print pt-6 border-t border-stone-200 flex flex-col sm:flex-row justify-between items-center gap-4 bg-stone-50 p-4 rounded-lg border border-stone-200">
+        <button onclick="switchTab('honors', true)" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-stone-300 text-stone-700 rounded-md text-xs font-mono-tag font-semibold hover:bg-stone-50 transition cursor-pointer">
+          <span>← Back to 02 / Honors &amp; Awards</span>
+        </button>
+        <a href="#dossier-nav" class="inline-flex items-center gap-2 px-4 py-2 bg-stone-900 text-white rounded-md text-xs font-mono-tag font-bold hover:bg-stone-800 transition shadow-xs">
+          <span>↑ Return to Top Menu</span>
+        </a>
+      </div>
+
     </section>
 
     <!-- FOOTER / IDENTITY REGISTRY -->
@@ -540,21 +655,69 @@
   </main>
 
   <script>
-    function switchTab(tab) {
-      // Buttons
-      ['projects', 'honors', 'competencies'].forEach(t => {
+    let currentMode = 'tabs';
+
+    function switchTab(tab, scrollToNav = false) {
+      if (currentMode === 'all') {
+        toggleViewMode('tabs');
+      }
+
+      const tabs = ['projects', 'honors', 'competencies'];
+      tabs.forEach(t => {
         const btn = document.getElementById('btn-' + t);
         const pane = document.getElementById('pane-' + t);
+        const dot = btn ? btn.querySelector('.tab-dot') : null;
+
         if (t === tab) {
-          btn.classList.add('tab-active');
-          btn.classList.remove('text-stone-600');
-          pane.classList.remove('hidden');
+          if (btn) {
+            btn.className = "tab-btn py-3 px-4 rounded-lg font-mono-tag text-xs font-bold transition flex items-center justify-between bg-stone-900 text-white border border-stone-900 shadow-sm cursor-pointer";
+          }
+          if (dot) {
+            dot.className = "tab-dot w-2 h-2 rounded-full bg-amber-400";
+          }
+          if (pane) pane.classList.remove('hidden');
         } else {
-          btn.classList.remove('tab-active');
-          btn.classList.add('text-stone-600');
-          pane.classList.add('hidden');
+          if (btn) {
+            btn.className = "tab-btn py-3 px-4 rounded-lg font-mono-tag text-xs font-semibold text-stone-700 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 transition flex items-center justify-between shadow-xs cursor-pointer";
+          }
+          if (dot) {
+            dot.className = "tab-dot w-2 h-2 rounded-full bg-stone-300";
+          }
+          if (pane) pane.classList.add('hidden');
         }
       });
+
+      if (scrollToNav) {
+        const navEl = document.getElementById('dossier-nav');
+        if (navEl) navEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function toggleViewMode(mode) {
+      currentMode = mode;
+      const tabsBtn = document.getElementById('view-tabs-btn');
+      const allBtn = document.getElementById('view-all-btn');
+      
+      if (mode === 'all') {
+        if (allBtn) {
+          allBtn.className = "px-2.5 py-1 rounded bg-stone-900 text-white font-semibold transition";
+        }
+        if (tabsBtn) {
+          tabsBtn.className = "px-2.5 py-1 rounded bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-300 transition";
+        }
+        ['projects', 'honors', 'competencies'].forEach(t => {
+          const pane = document.getElementById('pane-' + t);
+          if (pane) pane.classList.remove('hidden');
+        });
+      } else {
+        if (tabsBtn) {
+          tabsBtn.className = "px-2.5 py-1 rounded bg-stone-900 text-white font-semibold transition";
+        }
+        if (allBtn) {
+          allBtn.className = "px-2.5 py-1 rounded bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-300 transition";
+        }
+        switchTab('projects');
+      }
     }
   </script>
 </body>
