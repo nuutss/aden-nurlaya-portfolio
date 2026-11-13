@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aden Nurlaya — Digital Portfolio & Dossier</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    :root {
+      --paper: #FAF9F6;
+      --paper-card: #FFFFFF;
+      --ink: #1C1917;
+      --ink-muted: #78716C;
+      --accent-crimson: #991B1B;
+      --accent-navy: #1E3A8A;
+      --line: #E7E5E4;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+
+    .font-editorial {
+      font-family: 'Newsreader', Georgia, serif;
+    }
+
+    .font-mono-tag {
+      font-family: 'Space Mono', monospace;
+    }
+
+    .editorial-border {
+      border: 1px solid var(--line);
+    }
+
+    .editorial-card {
+      background: var(--paper-card);
+      border: 1px solid var(--line);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .tab-active {
+      background-color: var(--ink) !important;
+      color: #FFFFFF !important;
+      border-color: var(--ink) !important;
+    }
+
+    .quote-callout {
+      border-left: 2px solid var(--accent-crimson);
+      background-color: #F5F5F0;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-stone-900 antialiased selection:bg-amber-100 selection:text-stone-900">
+
+  <!-- TOP EDITORIAL METADATA BAR -->
+  <header class="border-b border-stone-200 bg-white/80 sticky top-0 z-50 backdrop-blur-sm">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+      <div class="flex items-center gap-3">
+        <span class="font-mono-tag text-xs font-bold tracking-wider uppercase text-stone-900">ADEN NURLAYA</span>
+        <span class="text-stone-300">/</span>
+        <span class="font-mono-tag text-xs text-stone-500 uppercase tracking-widest">DOSSIER 2026</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 text-xs font-mono-tag text-stone-600">
+        <span class="px-2 py-0.5 rounded bg-stone-100 border border-stone-200">{ MATHEMATICS }</span>
+        <span class="px-2 py-0.5 rounded bg-stone-100 border border-stone-200">{ SOFTWARE }</span>
+        <span class="px-2 py-0.5 rounded bg-stone-100 border border-stone-200">{ ATHLETICS }</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+    <!-- HERO SECTION: EDITORIAL LAYOUT -->
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-4 pb-8 border-b border-stone-200">
+      
+      <!-- Portrait Frame -->
+      <div class="md:col-span-5 flex justify-center md:justify-start">
+        <div class="relative p-2 bg-white border border-stone-300 shadow-sm rounded-sm">
+          <div class="w-64 h-80 sm:w-72 sm:h-96 overflow-hidden bg-stone-100">
+            <img src="photo_formal.jpg" alt="Aden Nurlaya" class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition duration-500">
+          </div>
+          <div class="mt-2 text-center">
+            <p class="font-mono-tag text-[11px] text-stone-400 uppercase tracking-wider">Plate 01 — Aden Nurlaya (SMAN 1 Sumedang)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Narrative -->
+      <div class="md:col-span-7 space-y-5">
+        <div class="space-y-2">
+          <div class="inline-block px-2.5 py-1 text-xs font-mono-tag uppercase tracking-wider bg-red-50 text-red-800 border border-red-200 rounded">
+            MEXT Scholarship Candidate • Grade 12
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-editorial font-normal tracking-tight text-stone-900 leading-tight">
+            Aden Nurlaya
+          </h1>
+          <p class="text-lg font-medium text-stone-700">
+            Dedicated Mathematics &amp; Tech Enthusiast | Student Researcher
+          </p>
+        </div>
+
+        <p class="text-sm text-stone-600 leading-relaxed">
+          Senior student at SMA Negeri 1 Sumedang, West Java. Uniting the analytical discipline of applied mathematics, software engineering, and competitive martial arts to build reliable, high-integrity digital systems for public administration.
+        </p>
+
+        <!-- Identity Metrics -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-3 border-t border-stone-200 font-mono-tag text-xs text-stone-600">
+          <div>
+            <span class="block text-stone-400 text-[10px] uppercase">Institution</span>
+            <span class="font-semibold text-stone-800">SMAN 1 Sumedang</span>
+          </div>
+          <div>
+            <span class="block text-stone-400 text-[10px] uppercase">Primary Target</span>
+            <span class="font-semibold text-stone-800">MEXT Japan &amp; IPDN</span>
+          </div>
+          <div>
+            <span class="block text-stone-400 text-[10px] uppercase">Athletic Rank</span>
+            <span class="font-semibold text-red-800">O2SN Karate Gold Medalist</span>
+          </div>
+        </div>
+
+        <!-- Direct Contact Badges -->
+        <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono-tag">
+          <a href="https://www.linkedin.com/in/aden-nurlaya-4a9611344/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#0A66C2] text-white hover:bg-[#004182] transition shadow-sm font-semibold">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn Profile
+          </a>
+          <a href="mailto:Adennurlaya21@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-stone-900 text-white hover:bg-stone-800 transition">
+            <span>✉</span> Adennurlaya21@gmail.com
+          </a>
+          <a href="https://wa.me/6285925123846" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-white border border-stone-300 text-stone-700 hover:border-stone-400 transition">
+            <span>☎</span> +62 859-2512-3846
+          </a>
+          <span class="text-stone-400 py-1.5">📍 Sumedang, Indonesia</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CORE PHILOSOPHY QUOTE -->
+    <section class="quote-callout p-6 md:p-8 rounded-sm">
+      <p class="font-mono-tag text-xs uppercase tracking-widest text-red-800 mb-2">{ CORE PHILOSOPHY / I AM }</p>
+      <blockquote class="font-editorial text-xl md:text-2xl text-stone-800 italic leading-snug">
+        "I believe that complex mathematical reasoning, software development, and athletic grit are not separate disciplines, but three expressions of the same commitment: pursuing rigorous self-mastery to create trustworthy, ethical solutions for the community."
+      </blockquote>
+      <div class="mt-4 flex items-center justify-between text-xs font-mono-tag text-stone-500">
+        <span>— Aden Nurlaya</span>
+        <span>Sumedang, West Java • 2026</span>
+      </div>
+    </section>
+
+    <!-- NAVIGATION TABS (CANVA EDITORIAL STYLE) -->
+    <nav class="flex border-b border-stone-300 space-x-1 sm:space-x-2 overflow-x-auto text-xs font-mono-tag">
+      <button onclick="switchTab('projects')" id="btn-projects" class="tab-active px-4 py-2.5 rounded-t font-semibold transition border border-b-0 border-transparent">
+        01 / SELECTED WORK SAMPLES (4)
+      </button>
+      <button onclick="switchTab('honors')" id="btn-honors" class="px-4 py-2.5 rounded-t text-stone-600 hover:text-stone-900 font-semibold transition border border-b-0 border-transparent">
+        02 / HONORS &amp; CERTIFICATIONS
+      </button>
+      <button onclick="switchTab('competencies')" id="btn-competencies" class="px-4 py-2.5 rounded-t text-stone-600 hover:text-stone-900 font-semibold transition border border-b-0 border-transparent">
+        03 / SKILLS &amp; 3-YEAR ACTION PLAN
+      </button>
+    </nav>
+
+    <!-- TAB CONTENT 01: WORK SAMPLES -->
+    <section id="pane-projects" class="space-y-8">
+      <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+        <h2 class="font-editorial text-2xl text-stone-900">Curated Work Samples</h2>
+        <span class="font-mono-tag text-xs text-stone-400">Class XII Framework: Problem → Process → Product → Impact → Reflection</span>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Project 01: FOMO Research -->
+        <article class="editorial-card p-6 md:p-8 space-y-5 rounded-sm">
+          <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-stone-100 pb-4">
+            <div>
+              <span class="font-mono-tag text-xs text-red-800 font-semibold uppercase tracking-wider">CASE 01 • SCIENTIFIC INQUIRY</span>
+              <h3 class="text-xl font-editorial font-bold text-stone-900 mt-1">
+                The Impact of FOMO on Deviant Behavior Among High School Students
+              </h3>
+            </div>
+            <span class="font-mono-tag text-xs px-2.5 py-1 bg-stone-100 text-stone-700 rounded border border-stone-200 self-start sm:self-auto">
+              May – June 2025
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">01 / The Problem</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Adolescent peer circles are increasingly hijacked by social-media induced Fear of Missing Out (FOMO). Students regularly succumb to negative conformity and hazardous behaviors simply to maintain superficial validation within their peer groups.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">02 / The Research Process</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Formulated empirical hypotheses and conducted in-depth qualitative one-on-one interviews across varied student social clusters at SMAN 1 Sumedang, transcribing and coding narratives to uncover the root psychosocial motivations of teen deviance.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">03 / The Product &amp; Concrete Impact</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Produced a formal Scientific Research Paper (<em>Karya Tulis Ilmiah</em>). Distinctively, the primary recommendations were addressed directly to the <strong>family and household environment</strong> rather than conventional punitive school measures, identifying parental awareness as the foremost proactive safeguard.
+                </p>
+              </div>
+              <div class="p-4 bg-stone-50 border-l-2 border-stone-400 rounded-r">
+                <h4 class="font-mono-tag text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">04 / Personal Reflection</h4>
+                <p class="font-editorial text-stone-800 text-sm italic leading-relaxed">
+                  "FOMO misdirected into peer-pleasing can derail adolescent potential. My deepest takeaway is that FOMO must be handled with conscious intentionality: channel the drive to participate solely toward deliberate, positive growth rather than impulsive trends."
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 02: DiPay -->
+        <article class="editorial-card p-6 md:p-8 space-y-5 rounded-sm">
+          <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-stone-100 pb-4">
+            <div>
+              <span class="font-mono-tag text-xs text-blue-800 font-semibold uppercase tracking-wider">CASE 02 • SOFTWARE &amp; HARDWARE INTEGRATION</span>
+              <h3 class="text-xl font-editorial font-bold text-stone-900 mt-1">
+                DiPay — Contactless Mobile Payment Ecosystem (NFC Tap-to-Pay)
+              </h3>
+            </div>
+            <span class="font-mono-tag text-xs px-2.5 py-1 bg-stone-100 text-stone-700 rounded border border-stone-200 self-start sm:self-auto">
+              Kotlin • Node.js • NFC HCE
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">01 / The Problem</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Physical cash dependence in high-density campus environments leads to bottleneck queues, transaction delays, and reconciliation inaccuracies across student cafeterias and school co-ops.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">02 / Engineering Process</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Engineered an Android mobile application leveraging NFC Host Card Emulation (HCE) to mimic contactless smart cards, connected to a dedicated Node.js backend server verifying cryptographic tokens and account balances in sub-second roundtrips.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">03 / Product &amp; Practical Impact</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Successfully deployed the complete executable APK (<code>DiPay.apk</code>) with backend integration, validating an ultra-fast, offline-capable tap-to-pay transaction flow suitable for localized academic ecosystems.
+                </p>
+              </div>
+              <div class="p-4 bg-stone-50 border-l-2 border-stone-400 rounded-r">
+                <h4 class="font-mono-tag text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">04 / Personal Reflection</h4>
+                <p class="font-editorial text-stone-800 text-sm italic leading-relaxed">
+                  "Speed and security in IoT protocols must be architected simultaneously. Building DiPay proved that convenience must never compromise data integrity."
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 03: KeuanganKu -->
+        <article class="editorial-card p-6 md:p-8 space-y-5 rounded-sm">
+          <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-stone-100 pb-4">
+            <div>
+              <span class="font-mono-tag text-xs text-emerald-800 font-semibold uppercase tracking-wider">CASE 03 • MOBILE APP &amp; DATA ANALYTICS</span>
+              <h3 class="text-xl font-editorial font-bold text-stone-900 mt-1">
+                KeuanganKu — Smart Budget Allocation &amp; Habit Analytics
+              </h3>
+            </div>
+            <span class="font-mono-tag text-xs px-2.5 py-1 bg-stone-100 text-stone-700 rounded border border-stone-200 self-start sm:self-auto">
+              Android Studio • Java/Kotlin
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">01 / The Problem</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Low financial literacy among high schoolers manifests as irregular bookkeeping, inability to segregate essential allocations from impulsive wishes, and persistent pocket-money deficits.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">02 / Product Development</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Architected a friction-free mobile experience with custom categorization algorithms, monthly budget thresholds, and clear graphical visualizations displaying spending velocity.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">03 / Demonstrated Impact</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Packaged into <code>KeuanganKuApp</code>, providing a clean, self-contained personal accounting dashboard that empowers young individuals to establish disciplined savings habits without requiring cloud synchronization.
+                </p>
+              </div>
+              <div class="p-4 bg-stone-50 border-l-2 border-stone-400 rounded-r">
+                <h4 class="font-mono-tag text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">04 / Personal Reflection</h4>
+                <p class="font-editorial text-stone-800 text-sm italic leading-relaxed">
+                  "Software efficacy is measured not by how complicated the codebase is, but by how reliably it shifts human behavior toward greater discipline and clarity."
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 04: P5 Logistics & Security -->
+        <article class="editorial-card p-6 md:p-8 space-y-5 rounded-sm">
+          <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-stone-100 pb-4">
+            <div>
+              <span class="font-mono-tag text-xs text-amber-800 font-semibold uppercase tracking-wider">CASE 04 • LEADERSHIP &amp; CRISIS OPERATIONS</span>
+              <h3 class="text-xl font-editorial font-bold text-stone-900 mt-1">
+                Logistics &amp; Security Coordination — SMAN 1 Sumedang P5 Exhibition
+              </h3>
+            </div>
+            <span class="font-mono-tag text-xs px-2.5 py-1 bg-stone-100 text-stone-700 rounded border border-stone-200 self-start sm:self-auto">
+              Resource Management
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">01 / The Real-World Challenge</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Tasked with managing logistics, safety, and equipment setup for hundreds of participating students during the flagship school exhibition under severe budget constraints and an unexpected shortfall of external corporate sponsorships.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">02 / Strategic Adaptation</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Performed line-by-line cost rationalization, reallocated existing campus gear to prevent unnecessary equipment rentals, and instituted a rotating student security patrol schedule.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">03 / Outcome &amp; Impact</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  The multi-day cultural and environmental exhibition was completed flawlessly with zero security incidents, zero property loss, and strict adherence to the restructured micro-budget.
+                </p>
+              </div>
+              <div class="p-4 bg-stone-50 border-l-2 border-stone-400 rounded-r">
+                <h4 class="font-mono-tag text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">04 / Personal Reflection</h4>
+                <p class="font-editorial text-stone-800 text-sm italic leading-relaxed">
+                  "Circumstances rarely align with our ideal expectations. Real leadership is not about having endless resources, but about staying composed, adapting rapidly, and solving problems with what is in front of you."
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TAB CONTENT 02: HONORS & CERTIFICATIONS -->
+    <section id="pane-honors" class="hidden space-y-8">
+      <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+        <h2 class="font-editorial text-2xl text-stone-900">Honors &amp; Formal Documentation</h2>
+        <span class="font-mono-tag text-xs text-stone-400">Authentic Certificates &amp; Citations</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- O2SN Karate Card -->
+        <div class="editorial-card p-6 space-y-4 rounded-sm">
+          <div class="bg-stone-100 p-2 border border-stone-200">
+            <img src="sertifikat_o2sn_karate.jpg" alt="O2SN Karate Certificate" class="w-full h-auto object-contain">
+          </div>
+          <div class="space-y-1">
+            <span class="font-mono-tag text-[11px] text-red-800 uppercase font-semibold">Gold Medalist &amp; Provincial Delegate</span>
+            <h3 class="font-editorial text-lg font-bold text-stone-900">
+              O2SN Karate Putra — West Java Provincial Championship 2025
+            </h3>
+            <p class="text-xs text-stone-600">
+              Department of Education of West Java Province (Dinas Pendidikan Jawa Barat). Issued July 30, 2025. Certificate No: <code>16992/PK.03.03.01/PSMA</code>.
+            </p>
+            <p class="text-xs text-stone-500 pt-2 border-t border-stone-100">
+              Won 1st Place at the Regency level of Sumedang to earn qualification as the official representative for West Java province. Demonstrates long-term athletic discipline and competitive mental stamina.
+            </p>
+          </div>
+        </div>
+
+        <!-- OSN Geography Card -->
+        <div class="editorial-card p-6 space-y-4 rounded-sm">
+          <div class="bg-stone-100 p-2 border border-stone-200">
+            <img src="sertifikat_osn_geografi.jpg" alt="OSN Geography Certificate" class="w-full h-auto object-contain">
+          </div>
+          <div class="space-y-1">
+            <span class="font-mono-tag text-[11px] text-blue-800 uppercase font-semibold">Academic Science Olympiad</span>
+            <h3 class="font-editorial text-lg font-bold text-stone-900">
+              National Science Olympiad (OSN-K) 2025 — Geography
+            </h3>
+            <p class="text-xs text-stone-600">
+              Issued by Balai Pengembangan Talenta Indonesia (BPTI) &amp; SMAN 1 Sumedang on June 26, 2025.
+            </p>
+            <p class="text-xs text-stone-500 pt-2 border-t border-stone-100">
+              Demonstrated quantitative and spatial reasoning in environmental systems, territorial demographics, and geoscience analysis under strict time constraints.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB CONTENT 03: COMPETENCIES & 3-YEAR ACTION PLAN -->
+    <section id="pane-competencies" class="hidden space-y-8">
+      <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+        <h2 class="font-editorial text-2xl text-stone-900">Competencies &amp; 3-Year Action Plan</h2>
+        <span class="font-mono-tag text-xs text-stone-400">Future Trajectory: 2026 – 2029</span>
+      </div>
+
+      <!-- Skills Matrix -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="editorial-card p-6 space-y-3 rounded-sm">
+          <h3 class="font-mono-tag text-xs font-bold uppercase text-stone-900 tracking-wider border-b border-stone-100 pb-2">
+            01 / Software &amp; Tech
+          </h3>
+          <ul class="text-xs space-y-2 text-stone-700">
+            <li class="flex items-start gap-2">
+              <span class="text-red-700 font-bold">•</span>
+              <span><strong>Android Kotlin:</strong> Native app development, NFC Host Card Emulation.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-700 font-bold">•</span>
+              <span><strong>Backend Services:</strong> Node.js, REST API endpoints, token verification.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-700 font-bold">•</span>
+              <span><strong>Foundational Cyber Security:</strong> Authentication protocols, network security principles.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="editorial-card p-6 space-y-3 rounded-sm">
+          <h3 class="font-mono-tag text-xs font-bold uppercase text-stone-900 tracking-wider border-b border-stone-100 pb-2">
+            02 / Quantitative Science
+          </h3>
+          <ul class="text-xs space-y-2 text-stone-700">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-700 font-bold">•</span>
+              <span><strong>Mathematics &amp; Physics:</strong> Analytical calculus, algebra, logical modeling.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-700 font-bold">•</span>
+              <span><strong>Empirical Research:</strong> Qualitative interview design, thematic coding.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-700 font-bold">•</span>
+              <span><strong>Financial Analysis:</strong> Cashflow auditing, budget allocation.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="editorial-card p-6 space-y-3 rounded-sm">
+          <h3 class="font-mono-tag text-xs font-bold uppercase text-stone-900 tracking-wider border-b border-stone-100 pb-2">
+            03 / Character &amp; Grit
+          </h3>
+          <ul class="text-xs space-y-2 text-stone-700">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-700 font-bold">•</span>
+              <span><strong>Karate Discipline:</strong> Poise, calm under duress, respect for code of ethics.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-700 font-bold">•</span>
+              <span><strong>Operational Adaptability:</strong> Resourcefulness during critical financial shortfalls.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-700 font-bold">•</span>
+              <span><strong>Autodidactic Learning:</strong> Persistent self-study of advanced tech stacks.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- 3-Year Action Plan (Editorial Timeline) -->
+      <div class="editorial-card p-6 md:p-8 space-y-6 rounded-sm">
+        <div class="border-b border-stone-200 pb-3">
+          <span class="font-mono-tag text-xs uppercase tracking-wider text-red-800 font-bold">{ THE ACTION PLAN / I WILL }</span>
+          <h3 class="font-editorial text-xl font-bold text-stone-900 mt-1">Strategic Roadmap (2026 – 2029)</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+          <div class="space-y-2 border-l-2 border-stone-900 pl-4">
+            <span class="font-mono-tag text-xs font-bold text-stone-900">Year 01 (2026–2027)</span>
+            <h4 class="font-bold text-stone-900">Academic Culmination &amp; Screening</h4>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Graduate with academic distinction from SMAN 1 Sumedang; complete rigorous screening for the MEXT Undergraduate Scholarship (Japan) and the Institute of Public Administration (IPDN); build foundational cryptography skills.
+            </p>
+          </div>
+
+          <div class="space-y-2 border-l-2 border-stone-400 pl-4">
+            <span class="font-mono-tag text-xs font-bold text-stone-500">Year 02 (2027–2028)</span>
+            <h4 class="font-bold text-stone-900">Cyber Security &amp; Administrative Systems</h4>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Specialize in high-reliability network defense and secure data communications; study public administration principles to align technology with state-level digital sovereignty.
+            </p>
+          </div>
+
+          <div class="space-y-2 border-l-2 border-stone-300 pl-4">
+            <span class="font-mono-tag text-xs font-bold text-stone-400">Year 03 (2028–2029)</span>
+            <h4 class="font-bold text-stone-900">Systemic Public Contribution</h4>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Author applied research on securing governmental public service architectures; design intelligent auditing prototypes to defend public digital infrastructure against systemic cyber threats.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER / IDENTITY REGISTRY -->
+    <footer class="pt-8 border-t border-stone-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs font-mono-tag text-stone-500">
+      <div>
+        <p class="font-bold text-stone-800 uppercase">Aden Nurlaya — Official Digital Portfolio</p>
+        <p>Curated for MEXT Scholarship &amp; Personal Academic Branding</p>
+      </div>
+      <div class="text-right sm:text-right space-y-1">
+        <p>SMAN 1 Sumedang, West Java, Indonesia</p>
+        <p><a href="https://www.linkedin.com/in/aden-nurlaya-4a9611344/" target="_blank" class="text-blue-700 underline font-semibold">linkedin.com/in/aden-nurlaya-4a9611344</a></p>
+        <p class="text-stone-400">Published November 2026</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    function switchTab(tab) {
+      // Buttons
+      ['projects', 'honors', 'competencies'].forEach(t => {
+        const btn = document.getElementById('btn-' + t);
+        const pane = document.getElementById('pane-' + t);
+        if (t === tab) {
+          btn.classList.add('tab-active');
+          btn.classList.remove('text-stone-600');
+          pane.classList.remove('hidden');
+        } else {
+          btn.classList.remove('tab-active');
+          btn.classList.add('text-stone-600');
+          pane.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
