@@ -225,7 +225,7 @@
             <span class="tab-dot w-2 h-2 rounded-full bg-amber-400"></span>
             <span>01 / SELECTED WORKS</span>
           </span>
-          <span class="text-[10px] opacity-75 font-mono px-1.5 py-0.5 rounded bg-white/20">4 Projects</span>
+          <span class="text-[10px] opacity-75 font-mono px-1.5 py-0.5 rounded bg-white/20">5 Projects</span>
         </button>
 
         <button onclick="switchTab('honors')" id="btn-honors" class="tab-btn py-3 px-4 rounded-lg font-mono-tag text-xs font-semibold text-stone-700 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 transition flex items-center justify-between shadow-xs cursor-pointer">
@@ -451,11 +451,74 @@
           </div>
         </article>
 
-        <!-- Project 04: P5 Logistics & Security -->
+        <!-- Project 04: ShutterAI Camera -->
         <article class="editorial-card p-6 md:p-8 space-y-5 rounded-sm">
           <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-stone-100 pb-4">
             <div>
-              <span class="font-mono-tag text-xs text-amber-800 font-semibold uppercase tracking-wider">CASE 04 • LEADERSHIP &amp; CRISIS OPERATIONS</span>
+              <span class="font-mono-tag text-xs text-teal-800 font-semibold uppercase tracking-wider">CASE 04 • EDGE AI &amp; COMPUTER VISION</span>
+              <h3 class="text-xl font-editorial font-bold text-stone-900 mt-1">
+                ShutterAI Camera — Real-Time On-Device Pose Guidance &amp; Auto-Capture
+              </h3>
+            </div>
+            <span class="font-mono-tag text-xs px-2.5 py-1 bg-stone-100 text-stone-700 rounded border border-stone-200 self-start sm:self-auto">
+              CameraX • Google MediaPipe • Android SDK
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">01 / The Problem</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Solo creators and everyday smartphone users struggle to achieve flattering, well-composed portrait shots without an experienced photographer directing posture, camera tilt, and rule-of-thirds alignment in real time.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">02 / Edge Computer Vision Pipeline</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Engineered an Android camera pipeline leveraging <strong>Google MediaPipe Tasks Vision</strong> to track 33 3D skeletal landmarks at 30+ FPS directly on-device. Formulated real-time vector trigonometry calculating joint-angle similarity and Euclidean distances against curated aesthetic pose presets, synchronized with hardware accelerometer sensor fusion for horizon leveling (±1.5° precision).
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-mono-tag text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">03 / Hands-Free Impact &amp; Privacy</h4>
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  Implemented the <strong>AI Auto-Shutter</strong> engine: once user posture satisfies preset alignment thresholds (≥ 70% match score) and camera leveling is maintained for 1.2s, the shutter fires automatically without touch. Operates 100% offline on-device with zero cloud roundtrips and absolute user privacy.
+                </p>
+              </div>
+              <div class="p-4 bg-stone-50 border-l-2 border-stone-400 rounded-r">
+                <h4 class="font-mono-tag text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">04 / Personal Reflection</h4>
+                <p class="font-editorial text-stone-800 text-sm italic leading-relaxed">
+                  "Edge AI is at its best when it disappears into the user's natural workflow. ShutterAI proved that on-device computer vision can democratize artistic photography by transforming mathematical landmark matrices into intuitive creative guidance."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- APP SCREENSHOT — CLICKABLE DOWNLOAD: ShutterAI Camera -->
+          <div class="mt-5 pt-5 border-t border-stone-100">
+            <p class="font-mono-tag text-xs text-stone-400 uppercase tracking-wider mb-3">05 / Live App Visual Evidence &amp; Executable</p>
+            <a href="ShutterAI-Camera.apk" download="ShutterAI-Camera.apk" class="group relative block max-w-xs cursor-pointer" title="Click to download ShutterAI-Camera.apk">
+              <div class="relative overflow-hidden rounded-2xl border border-teal-200 shadow-md group-hover:shadow-lg transition-shadow duration-200 bg-stone-50">
+                <img src="shutterai_app_mockup.png" alt="ShutterAI Camera App Interface Screenshot" class="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-300">
+                <div class="absolute inset-0 bg-teal-900/0 group-hover:bg-teal-900/10 transition-colors duration-200 rounded-2xl"></div>
+                <div class="absolute top-3 right-3 flex items-center gap-1.5 bg-teal-700 text-white text-[11px] font-mono-tag font-bold px-2.5 py-1 rounded-full shadow-md">
+                  <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  DOWNLOAD APK
+                </div>
+              </div>
+              <p class="mt-2 text-xs font-mono-tag text-teal-700 font-semibold">↓ Tap image to download ShutterAI-Camera.apk (Android • ~63MB)</p>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 05: P5 Logistics & Security -->
+        <article class="editorial-card p-6 md:p-8 space-y-5 rounded-sm">
+          <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-stone-100 pb-4">
+            <div>
+              <span class="font-mono-tag text-xs text-amber-800 font-semibold uppercase tracking-wider">CASE 05 • LEADERSHIP &amp; CRISIS OPERATIONS</span>
               <h3 class="text-xl font-editorial font-bold text-stone-900 mt-1">
                 Logistics &amp; Security Coordination — SMAN 1 Sumedang P5 Exhibition
               </h3>
@@ -632,6 +695,10 @@
             01 / Software &amp; Tech
           </h3>
           <ul class="text-xs space-y-2 text-stone-700">
+            <li class="flex items-start gap-2">
+              <span class="text-red-700 font-bold">•</span>
+              <span><strong>Edge AI &amp; Computer Vision:</strong> Google MediaPipe Tasks, on-device pose estimation, CameraX.</span>
+            </li>
             <li class="flex items-start gap-2">
               <span class="text-red-700 font-bold">•</span>
               <span><strong>Android Kotlin:</strong> Native app development, NFC Host Card Emulation.</span>
